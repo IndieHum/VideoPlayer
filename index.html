@@ -8,6 +8,11 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         />
+        <link
+            rel="shortcut icon"
+            href="./icons8-video-96.png"
+            type="image/x-icon"
+        />
         <title>Video Player</title>
     </head>
     <body>
@@ -19,7 +24,7 @@
             <div class="play-btn">
                 <i class="fa-solid fa-play"></i>
             </div>
-            <div class="pause-btn">
+            <div class="pause-btn" style="display: none">
                 <i class="fa-solid fa-pause"></i>
             </div>
             <div class="nav">
@@ -28,7 +33,10 @@
                 </div>
                 <div class="nav-sound">
                     <i class="fa-solid fa-volume-high"></i>
-                    <!-- <i class="fa-solid fa-volume-xmark"></i> -->
+                    <i
+                        class="fa-solid fa-volume-xmark"
+                        style="display: none"
+                    ></i>
                 </div>
                 <i class="fa-solid fa-gauge-high"></i>
                 <i class="fa-solid fa-expand"></i>

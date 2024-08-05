@@ -1,6 +1,6 @@
 :root {
     --default-clr: #00ffff;
-    --darker-default-clr: #00afff;
+    --darker-default-clr: #00aaaa;
 }
 
 *,
@@ -13,6 +13,7 @@
 
 i {
     cursor: pointer;
+    color: var(--darker-default-clr);
 }
 
 body {
@@ -81,13 +82,14 @@ body {
     display: inherit;
     align-items: inherit;
     cursor: pointer;
+    position: relative;
 }
 
 .nav-btn {
     width: 15px;
     height: 15px;
     position: absolute;
-    left: 0;
+    left: 0%;
     background-color: var(--darker-default-clr);
     border-radius: 50%;
 }
