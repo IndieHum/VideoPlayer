@@ -1,0 +1,97 @@
+:root {
+    --default-clr: #00ffff;
+    --darker-default-clr: #00afff;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+i {
+    cursor: pointer;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    position: relative;
+    width: 75%;
+}
+
+.container video {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid var(--default-clr);
+    box-shadow: 15px 15px 50px #000;
+}
+
+.pause-btn,
+.play-btn {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    padding: 25px;
+    background-color: var(--default-clr);
+    clip-path: polygon(
+        30% 0%,
+        70% 0%,
+        100% 30%,
+        100% 70%,
+        70% 100%,
+        30% 100%,
+        0% 70%,
+        0% 30%
+    );
+    opacity: 0.7;
+    z-index: 10;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    cursor: pointer;
+}
+
+.nav {
+    position: absolute;
+    bottom: 25px;
+    z-index: 10;
+    width: 90%;
+    display: inherit;
+    align-items: inherit;
+    justify-content: space-between;
+}
+
+.nav-time {
+    background-color: var(--default-clr);
+    padding: 3px;
+    width: 85%;
+    border-radius: 25px;
+    display: inherit;
+    align-items: inherit;
+    cursor: pointer;
+}
+
+.nav-btn {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    background-color: var(--darker-default-clr);
+    border-radius: 50%;
+}
+
+.nav-sound {
+    width: min-content;
+}
