@@ -9,4 +9,41 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+.container button,
+.container input {
+    cursor: pointer;
+}
+
+body {
+    max-width: 1024px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+}
+
+.container video {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.container nav {
+    background-color: var(--darker-default-clr);
+    display: flex;
+    align-items: center;
+    gap: 5.5px;
+    padding: 5px 10px;
+    font-weight: 700;
+    border-radius: 0 0 15px 15px;
+}
+
+nav #time-range {
+    flex-basis: 85%;
 }
