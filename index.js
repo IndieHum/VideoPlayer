@@ -23,17 +23,25 @@ const StopButtonHandler = () => {
     TheVideo.currentTime = 0;
 };
 
-const ProgressBarHandler = () => {
-    TimeRange.value = (TheVideo.currentTime / TheVideo.duration) * 100;
+const TimeStringFixer = (type) => {
+    // two entry : total & stamps
 
-    let min = (TheVideo.currentTime / 60).toFixed();
+    const TimeToggle = `${
+        type == "stamps" ? TheVideo.currentTime : TheVideo.duration
+    }`;
+
+    let min = (TimeToggle / 60).toFixed();
     if (min < TheVideo.duration) min = `${min < 10 ? "0" : ""}${String(min)}`;
-    let sec = (TheVideo.currentTime % 60).toFixed();
+    let sec = (TimeToggle % 60).toFixed();
     if (sec < TheVideo.duration) sec = `${sec < 10 ? "0" : ""}${String(sec)}`;
 
-    TimeStamps.innerText = `${min}:${sec}`;
+    return `${min}:${sec}`;
+};
 
-    console.log(min, sec);
+const ProgressBarHandler = () => {
+    TimeTotal.innerText = TimeStringFixer("total");
+    TimeStamps.innerText = TimeStringFixer("stamps");
+    TimeRange.value = (TheVideo.currentTime / TheVideo.duration) * 100;
 };
 
 const TimeRangeHandler = () => {
