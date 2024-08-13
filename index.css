@@ -1,6 +1,6 @@
 :root {
-    --default-clr: #00ffff;
-    --darker-default-clr: #00aaaa;
+    --default-clr: #a2ca71;
+    --darker-default-clr: #387f39;
 }
 
 *,
@@ -12,9 +12,21 @@
     font-family: Tahoma, Verdana, sans-serif;
 }
 
-.container button,
-.container input {
+.container nav button,
+.container nav input,
+.container video {
     cursor: pointer;
+}
+
+.container button {
+    display: flex;
+    padding: 5px;
+    border: none;
+    border-radius: 50%;
+}
+
+.container button:hover {
+    background-color: #fff;
 }
 
 body {
@@ -35,11 +47,11 @@ body {
 }
 
 .container nav {
-    background-color: var(--darker-default-clr);
+    background-color: var(--default-clr);
     display: flex;
     align-items: center;
     gap: 5.5px;
-    padding: 5px 10px;
+    padding: 15px;
     font-weight: 700;
     border-radius: 0 0 15px 15px;
 }
