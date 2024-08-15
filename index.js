@@ -9,6 +9,8 @@ const TimeStamps = document.getElementById("time-stamps");
 const TimeTotal = document.getElementById("time-total");
 
 const ToggleVideoHandler = () => {
+    if (!TheVideo.currentSrc) return alert("Video not found!");
+
     if (TheVideo.paused) {
         TheVideo.play();
         PlayButtonicon.innerText = "pause_circle";
@@ -64,3 +66,6 @@ TimeRange.addEventListener("change", TimeRangeHandler);
 PlayButton.addEventListener("click", ToggleVideoHandler);
 StopButton.addEventListener("click", StopButtonHandler);
 VolumeButton.addEventListener("click", VolumeButtonHandler);
+window.addEventListener("keypress", (e) => {
+    if (e.key == " ") ToggleVideoHandler();
+});
