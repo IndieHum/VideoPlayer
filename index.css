@@ -12,6 +12,19 @@
     font-family: Tahoma, Verdana, sans-serif;
 }
 
+body {
+    max-width: 1024px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+}
+
 .container nav button,
 .container nav input,
 .container video {
@@ -27,18 +40,6 @@
 
 .container button:hover {
     background-color: #fff;
-}
-
-body {
-    max-width: 1024px;
-    height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-}
-
-.container {
-    width: 100%;
 }
 
 .container video {

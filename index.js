@@ -7,6 +7,8 @@ const VolumeButtonIcon = VolumeButton.querySelector("span");
 const TimeRange = document.getElementById("time-range");
 const TimeStamps = document.getElementById("time-stamps");
 const TimeTotal = document.getElementById("time-total");
+const ForwardButton = document.getElementById("forward-btn");
+const RewindButton = document.getElementById("rewind-btn");
 
 const ToggleVideoHandler = () => {
     if (!TheVideo.currentSrc) return alert("Video not found!");
@@ -60,6 +62,14 @@ const VolumeButtonHandler = () => {
     }
 };
 
+const ForwardTimeHandler = () => {
+    TheVideo.currentTime += 10;
+};
+
+const RewindTimeHandler = () => {
+    TheVideo.currentTime -= 10;
+};
+
 TheVideo.addEventListener("click", ToggleVideoHandler);
 TheVideo.addEventListener("timeupdate", ProgressBarHandler);
 TimeRange.addEventListener("change", TimeRangeHandler);
@@ -69,3 +79,5 @@ VolumeButton.addEventListener("click", VolumeButtonHandler);
 window.addEventListener("keypress", (e) => {
     if (e.key == " ") ToggleVideoHandler();
 });
+ForwardButton.addEventListener("click", ForwardTimeHandler);
+RewindButton.addEventListener("click", RewindTimeHandler);
